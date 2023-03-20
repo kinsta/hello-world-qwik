@@ -1,4 +1,5 @@
-![](https://user-images.githubusercontent.com/2342458/194169079-aa12e92d-87fd-4da4-9afd-93de44874dae.png)
+![Qwik](https://user-images.githubusercontent.com/2342458/226346990-667a72db-dd1a-4a6a-a024-dc3341a056f8.png)
+
 # Kinsta - Hello World - Static Site With Qwik
 
 An example of how to deploy a static site built with Qwik on Kinsta App Hosting services.
