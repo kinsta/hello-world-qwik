@@ -1,71 +1,34 @@
-# Qwik City App ⚡️
+![](https://user-images.githubusercontent.com/2342458/194169079-aa12e92d-87fd-4da4-9afd-93de44874dae.png)
+# Kinsta - Hello World - Static Site With Qwik
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+An example of how to deploy a static site built with Qwik on Kinsta App Hosting services.
 
 ---
+Kinsta is a developer-centric cloud host / PaaS. We’re striving to make it easier for you to share your web projects with your users. Focus on coding and building, and we’ll take care of deployment and provide fast, scalable hosting. + 24/7 expert-only support.
 
-## Project Structure
+- [Start your free trial](https://kinsta.com/signup/?product_type=app-db)
+- [Application Hosting](https://kinsta.com/application-hosting)
+- [Database Hosting](https://kinsta.com/database-hosting)
 
-This project is using Qwik with [QwikCity](https://qwik.builder.io/qwikcity/overview/). QwikCity is just a extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+## Dependency Management
 
-Inside your project, you'll see the following directory structure:
+During the deployment process Kinsta will automatically install dependencies defined in your `package.json` file.
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
+## Web Server Setup
 
-- `src/routes`: Provides the directory based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
+### Port
 
-- `src/components`: Recommended directory for components.
+Kinsta automatically sets the `PORT` environment variable. You should **not** define it yourself and you should **not** hard-code it into the application. The `serve` packageutilizes the port set by Kinsta automatically.
 
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
+### Start Command
 
-## Add Integrations and deployment
+When deploying an application Kinsta will automatically create a web process with `npm start` as the entry point. Make sure to use this command to run your server.
 
-Use the `npm run qwik add` command to add additional integrations. Some examples of integrations include: Cloudflare, Netlify or Express server, and the [Static Site Generator (SSG)](https://qwik.builder.io/qwikcity/guides/static-site-generation/).
+## Deployment Lifecycle
 
-```shell
-npm run qwik add # or `yarn qwik add`
-```
+Whenever a deployment is initiated (through creating an application or re-deploying due to an incoming commit) the `npm build` command is run, followed by the `npm start` command.
 
-## Development
+## What is Qwik
+**Qwik** is a new kind of web framework that can deliver instant loading web applications at any size or complexity. Your sites and apps can boot with about 1kb of JS (regardless of application complexity), and achieve consistent performance at scale.
 
-Development mode uses [Vite's development server](https://vitejs.dev/). During development, the `dev` command will server-side render (SSR) the output.
-
-```shell
-npm start # or `yarn start`
-```
-
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
-
-## Preview
-
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to locally preview a production build, and it should not be used as a production server.
-
-```shell
-npm run preview # or `yarn preview`
-```
-
-## Production
-
-The production build will generate client and server modules by running both client and server build commands. Additionally, the build command will use Typescript to run a type check on the source code.
-
-```shell
-npm run build # or `yarn build`
-```
-
-## Static Site Generator (Node.js)
-
-```
-npm run build.server
-```
+More info on the [Qwik](https://qwik.builder.io/) website.
