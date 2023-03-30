@@ -23,13 +23,11 @@ Kinsta automatically sets the `PORT` environment variable. You should **not** de
 
 ### Start Command
 
-When deploying an application Kinsta will automatically create a web process with `npm start` as the entry point. Make sure to use this command to run your server.
+When deploying an application, Kinsta automatically creates a web process with `npm start` as the entry point. Make sure to use this command to run your server.
 
 ## Deployment Lifecycle
 
 Whenever a deployment is initiated (through creating an application or re-deploying due to an incoming commit) the `npm build` command is run, followed by the `npm start` command.
 
 ## What is Qwik
-**Qwik** is a new kind of web framework that can deliver instant loading web applications at any size or complexity. Your sites and apps can boot with about 1kb of JS (regardless of application complexity), and achieve consistent performance at scale.
-
-More info on the [Qwik](https://qwik.builder.io/) website.
+Qwik offers instant loading of web applications of any size or complexity with about 1 KB of JavaScript and consistent performance at scale. More information is available on the [Qwik](https://qwik.builder.io/) website.
